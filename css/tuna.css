@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  padding: 0; 
+  overflow-x: hidden; 
+  font-family: 'Sanita', sans-serif;
+  background-color: #EEEBE1;
+  color: #131810;
+}
+
+
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.main-header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #131810;
+}
+
+.header-buttons {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #131810;
+  cursor: pointer;
+}
+
+
+.shrinkable-hero {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  transition: height 0.4s ease;
+  overflow: hidden;
+}
+
+.shrinkable-hero.shrunk {
+  height: 250px;
+}
+
+.shrinkable-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.hero-text {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  color: white;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hero-text .highlight {
+  color: #314028;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.badge {
+  position: absolute;
+  background: #F5F4F1;
+  color: #131810;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 180px;
+  z-index: 2;
+}
+
+.badge-left {
+  bottom: 30px;
+  left: 30px;
+}
+
+.badge-right {
+  bottom: 30px;
+  right: 30px;
+}
+
+.recipe-cards {
+  display: flex;
+  justify-content: center;
+  gap: 100px; 
+  padding: 200px 20px; 
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #FFFEEC;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 400px;
+  font-size: 16px;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card ul {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.section-divider {
+  border: none;
+  border-top: 3px solid #384D2C;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  width: 90%;
+}
+
+.how-to-box {
+  background-color: #EADAB6;
+  border-radius: 12px;
+  padding: 40px;
+  margin: 40px auto;
+  margin-bottom: 400px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.how-to-box h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.column p {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+.feedback {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.feedback p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.feedback button {
+  margin: 10px;
+  padding: 10px 28px;
+  background-color: #314028;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.share-buttons {
+  margin-top: 20px;
+  margin-bottom: 100px;  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.share-buttons button {
+  border-radius: 8px;
+  background-color: #131810;
+  color: white;
+  padding: 16px 24px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+
+footer {
+  background-color: #384D2C;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.feedback-message {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #384D2C;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.feedback-message.show {
+  opacity: 1;
+}
+
+.feedback button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+

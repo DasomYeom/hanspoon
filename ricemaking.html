@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tuna Mayo Recipe</title>
+  <link rel="stylesheet" href="css/tuna.css" />
+  <link rel="stylesheet" href="font/fonts.css" />
+  <link rel="stylesheet" href="css/allmenu.css" />
+  <link rel="stylesheet" href="css/font.css">
+</head>
+<body>
+
+
+  <header class="main-header hero-header">
+    <button class="menu-btn" id="menu-btn">
+      <img src="image/barblack.png" alt="Menu" class="menu-icon" />
+    </button>
+    <a href="index.html"><h1>Hanspoon</h1></a>
+  </header>
+
+
+  <nav class="hamburger-menu" id="hamburgerMenu">
+    <ul>
+      <li>
+        <button class="dropdown-toggle" id="recipesToggle">
+          <strong>Recipes</strong> <span class="dropdown-icon">▼</span>
+        </button>
+        <ul class="sub-menu" id="recipesSubMenu">
+            <li><a href="rice_category.html">Rice</a></li>
+            <li><a href="soups_category.html">Soups & Stews</a></li>
+            <li><a href="side_category.html">Side Dishes</a></li>
+            <li><a href="noodles_category.html">Noodles</a></li>
+            <li><a href="one_bowl_category.html">One-Bowl Dishes</a></li>
+            <li><a href="others_category.html">Others</a></li>
+        </ul>
+      </li>
+      <li><strong><a href="community.html">Community & Sharing</a></strong></li>
+      <li><strong><a href="mykitchen.html">My Kitchen</a></strong></li>
+      <li><strong><a href="about.html">About & Contact</a></strong></li>
+    </ul>
+  </nav>
+
+
+  <section class="shrinkable-hero">
+    <img src="image/riceb.jpeg" alt="Tuna Mayo Rice Balls" />
+    <div class="hero-text">
+      <h2><span class="highlight">Tuna Mayo</span> Rice Balls</h2>
+      <p>A fantastic blend of savory and sweet mayonnaise and tuna.</p>
+    </div>
+    <div class="badge badge-left">
+      <p><strong>Cooking Time:</strong> 15 min<br><strong>Difficulty:</strong> Easy</p>
+    </div>
+    <div class="badge badge-right">
+      <p><strong>Ingredients:</strong><br>Rice, Tuna, Mayo, Seaweed</p>
+    </div>
+  </section>
+
+
+  <section class="recipe-cards">
+    <div class="card">
+      <h3>Ingredients Info</h3>
+      <ul>
+        <li>1 bowl of rice</li>
+        <li>1 can of tuna</li>
+        <li>1 tbsp mayonnaise</li>
+        <li>Salt, seaweed</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Tool</h3>
+      <ul>
+        <li>Hands</li>
+        <li>Gloves</li>
+        <li>Bowls</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  
+  <section class="how-to-box">
+    <h3>How to make</h3>
+    <div class="steps">
+      <div class="column">
+        <p><strong>1. Prepare the Tuna</strong><br>Open the tuna can and drain all the oil or water completely. Place the tuna in a small bowl, add mayonnaise, and mix well.</p>
+        <p><strong>2. Season the Rice</strong><br>Put warm rice in a bowl and mix it with a pinch of salt. Let the rice cool slightly so it's easier to shape.</p>
+        <p><strong>3. Shape the Rice Balls</strong><br>Wet your hands slightly to prevent rice from sticking. Take some rice, place tuna mayo in the center, and cover it with more rice. Gently press and shape the rice ball into a round or triangular form.</p>
+      </div>
+      <div class="column">
+        <p><strong>4. Wrap with Seaweed (Optional)</strong><br>Cut the seaweed into small pieces and wrap or attach them to the rice ball.  For a crispier texture, use roasted seaweed.</p>
+        <p><strong>5. Ready to Serve!</strong><br>Serve immediately or pack it for a quick and easy lunch.</p>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="feedback">
+    <p>Was this article helpful?</p>
+    <button id="yes-btn">YES</button>
+    <button id="no-btn">NO</button>
+    <div class="feedback-message" id="feedback-message"></div>
+    <div class="share-buttons">
+        <button onclick="location.href='community.html'">Post a review after making it!</button>
+        <button onclick="location.href='community.html'">Share new recipe or tip</button>
+      </div>
+  </section>
+
+ 
+  <footer>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Contact</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+  </footer>
+
+ 
+  <script src="js/sidebar.js"></script>
+
+
+  <script>
+    window.addEventListener("scroll", () => {
+      const hero = document.querySelector(".shrinkable-hero");
+      hero.classList.toggle("shrunk", window.scrollY > 100);
+    });
+  </script>
+
+ 
+  <script>
+    const yesBtn = document.getElementById('yes-btn');
+    const noBtn = document.getElementById('no-btn');
+    const message = document.getElementById('feedback-message');
+
+    yesBtn.addEventListener('click', () => {
+      message.textContent = 'Thanks for your feedback! 💖';
+      message.classList.add('show');
+      yesBtn.disabled = true;
+      noBtn.disabled = true;
+    });
+
+    noBtn.addEventListener('click', () => {
+      message.textContent = "Thanks! We'll do better next time. 🙏";
+      message.classList.add('show');
+      yesBtn.disabled = true;
+      noBtn.disabled = true;
+    });
+  </script>
+
+<script src="js/allmenu.js"></script>
+
+</body>
+</html>

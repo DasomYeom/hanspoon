@@ -1,0 +1,154 @@
+body {
+    background-color: #efede4;
+    font-family: 'Figtree', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    background-color: #efede4;
+    position: relative;
+    padding: 0 24px;
+  }
+  
+  
+  .main-header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .menu-icon {
+    width: 18px;
+  }
+  
+  .main-nav-bar {
+    width: 100%;
+    background-color: #efede4;
+    border-bottom: 1px solid #131810;
+    border-top: 1px solid #131810;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    margin-bottom: 24px;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .main-nav li a {
+    text-decoration: none;
+    color: #131810;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .kitchen-page {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+ 
+  .profile-banner {
+    background-color: #eadab6;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ccc;
+    flex-shrink: 0;
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  
+  .profile-text h2 {
+    margin: 0;
+    font-size: 26px;
+  }
+  
+  .profile-text p {
+    margin-top: 5px;
+    color: #444;
+  }
+  
+
+  .kitchen-section {
+    margin-bottom: 40px;
+  }
+  
+  .kitchen-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .kitchen-box {
+    background-color: #fefce8;
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px dashed #ccc;
+    font-size: 15px;
+    color: #666;
+  }
+  
+
+  footer {
+    background-color: #384D2C;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  

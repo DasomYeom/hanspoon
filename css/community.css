@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    background-color: #EEEBE1;
+    font-family: 'Sanita', sans-serif;
+    color: #131810;
+  }
+  
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    background-color: #EEEBE1;
+    position: relative;
+    padding: 0 24px;
+  }
+
+  .main-header a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  
+  .main-header h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+  
+  .menu-icon {
+    width: 15px;
+    height: auto;
+  }
+  
+  .main-nav-bar {
+    width: 100vw;
+    border-top: 1px solid #131810;
+    border-bottom: 1px solid #131810;
+    background-color: #EEEBE1;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+  
+  .main-nav li a {
+    text-decoration: none;
+    color: #131810;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .section-header {
+    max-width: 1100px;
+    margin: 0 auto 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+    flex: 1;
+  }
+  
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 500px;
+    flex-shrink: 0;
+  }
+  
+  .search-bar input {
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #999;
+    border-radius: 0;
+    width: 250px;
+    height: 48px;
+    box-sizing: border-box;
+  }
+  
+  .search-bar button {
+    background-color: #131810;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 48px;
+    border-radius: 0;
+    white-space: nowrap;
+  }
+  
+  
+  .shared-recipes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 30px;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .shared-card {
+    width: 100%;
+    max-width: 320px;
+    background-color: #fff;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .shared-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  
+  .card-meta {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 2;
+  }
+  
+  .card-text {
+    padding: 16px;
+    text-align: left;
+    min-height: 120px;
+  }
+  
+  .card-text h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #131810;
+    text-decoration: none;
+  }
+  
+  .card-text p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+    text-decoration: none;
+  }
+
+  .card-text a {
+    color: inherit;
+    text-decoration: none;
+  }  
+
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+
+  .bookmark-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #fff;
+    border: none;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    z-index: 2;
+  }
+  
+  .bookmark-btn img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    pointer-events: none;
+  }
+
+  .bookmark-btn.animate {
+    animation: pop 0.3s ease;
+  }
+  
+  @keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+  
+  
+  .pagination {
+    text-align: center;
+    font-size: 14px;
+    margin: 40px 0 80px;
+    color: #444;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .pagination button {
+    background: #3e5134;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background: #1e281c;
+  }
+  
+  .main-footer {
+    background-color: #EEEBE1;
+    color: #131810;
+    padding: 40px 0;
+    text-align: left;
+    border-top: 1px solid #131810;
+  }
+  
+  .footer-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .main-footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  
+  .main-footer a {
+    color: #131810;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .main-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .share-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .share-btn {
+    background-color: #131810;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 18px 36px;
+    border: none;
+    border-radius: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  

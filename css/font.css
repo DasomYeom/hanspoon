@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Sanita';
+    src: url('../font/Sansita-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Sanita';
+    src: url('../font/Sansita-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'Sanita';
+    src: url('../font/Sansita-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+  }
+  
+  @font-face {
+    font-family: 'Sanita';
+    src: url('../font/Sansita-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Anek Gurmukhi';
+    src: url('../font/AnekGurmukhi-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Anek Gurmukhi';
+    src: url('../font/AnekGurmukhi-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'Anek Gurmukhi';
+    src: url('../font/AnekGurmukhi-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+  }
+  
+
+body {
+    font-family: 'Anek Gurmukhi', sans-serif;
+    font-weight: 400;
+    color: #000000;
+  }
+  
+
+  .sanita-title {
+    font-family: 'Sanita', sans-serif;
+    font-weight: 700;
+    font-size: 36pt;
+    color: #131810;
+  }
+  
+
+  .sanita-sub {
+    font-family: 'Sanita', sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    color: #384D2C;
+  }
+  
+
+  .anek-subtitle {
+    font-family: 'Anek Gurmukhi', sans-serif;
+    font-weight: 400;
+    font-size: 32pt;
+  }
+  
+
+  .anek-desc {
+    font-family: 'Anek Gurmukhi', sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  
+
+  .recipe-step-title {
+    font-family: 'Anek Gurmukhi', sans-serif;
+    font-weight: 700;
+    font-size: 18pt;
+  }
+  
+
+  .recipe-step-desc {
+    font-family: 'Anek Gurmukhi', sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    line-height: 1.6;
+  }
+  

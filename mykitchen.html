@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hanspoon - My Kitchen</title>
+  <link rel="stylesheet" href="css/mykitchen.css" />
+  <link rel="stylesheet" href="css/allmenu.css" />
+  <link rel="stylesheet" href="css/font.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <button class="menu-btn" id="menu-btn">
+      <img src="image/barblack.png" alt="Menu" class="menu-icon" />
+    </button>
+    <a href="index.html"><h1>Hanspoon</h1></a>
+  </header>
+
+
+<nav class="hamburger-menu" id="hamburgerMenu">
+    <ul>
+      <li>
+        <button class="dropdown-toggle" id="recipesToggle">
+          <strong>Recipes</strong> <span class="dropdown-icon">▼</span>
+        </button>
+        <ul class="sub-menu" id="recipesSubMenu">
+          <li><a href="rice_category.html">Rice</a></li>
+          <li><a href="soups_category.html">Soups & Stews</a></li>
+          <li><a href="side_category.html">Side Dishes</a></li>
+          <li><a href="noodles_category.html">Noodles</a></li>
+          <li><a href="one_bowl_category.html">One-Bowl Dishes</a></li>
+          <li><a href="others_category.html">Others</a></li>
+        </ul>
+      </li>
+      <li><strong><a href="community.html">Community & Sharing</a></strong></li>
+      <li><strong><a href="mykitchen.html">My Kitchen</a></strong></li>
+      <li><strong><a href="about.html">About & Contact</a></strong></li>
+    </ul>
+  </nav>
+  
+
+
+  <div class="main-nav-bar">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="community.html">Community & Sharing</a></li>
+        <li><a href="mykitchen.html">My Kitchen</a></li>
+        <li><a href="about.html">About & Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <main class="kitchen-page">
+    <section class="profile-banner">
+            <div class="profile-image">
+              <img src="image/dog.jpg" alt="Profile picture" />
+            </div>
+            <div class="profile-info">
+              <h2>My Kitchen</h2>
+              <p>Welcome back, Chef!</p>
+            </div>
+          </div>
+          
+    </section>
+
+    <section class="kitchen-section">
+      <h3>My Profile</h3>
+      <div class="kitchen-box">
+        <p>Nickname: ChefyDoggo</p>
+        <p>Email: chefydoggo@gmail.com</p>
+        <p>Joined: March 2025</p>
+      </div>
+    </section>
+
+    <section class="kitchen-section">
+      <h3>My Review</h3>
+      <div class="kitchen-box">
+        <p>You haven't written any reviews yet.</p>
+      </div>
+    </section>
+
+    <section class="kitchen-section">
+      <h3>Managing Posts</h3>
+      <div class="kitchen-box">
+        <p>You haven't shared any recipes yet.</p>
+      </div>
+    </section>
+
+    <section class="kitchen-section">
+      <h3>Bookmark</h3>
+      <div class="kitchen-box" id="bookmarkSection">
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Contact</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </footer>
+
+  <script src="js/bookmark.js"></script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('bookmarkSection');
+      const bookmarks = JSON.parse(localStorage.getItem('bookmarkedRecipes')) || [];
+    
+      if (bookmarks.length === 0) {
+        container.innerHTML = '<p>You haven’t bookmarked any recipes yet.</p>';
+      } else {
+        container.innerHTML = ''; 
+        bookmarks.forEach(id => {
+          const card = document.createElement('div');
+          card.className = 'recipe-card';
+          card.innerHTML = `
+            <h4>${id.replace(/_/g, ' ')}</h4>
+            <a href="${id}.html">View Recipe</a>
+          `;
+          container.appendChild(card);
+        });
+      }
+    });
+    </script>
+    
+<script src="js/allmenu.js"></script>
+<script src="js/bringbookmark.js"></script>
+
+
+</body>
+</html>

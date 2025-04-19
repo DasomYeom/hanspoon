@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hanspoon - About & Contact</title>
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/allmenu.css" />
+  <link rel="stylesheet" href="css/font.css">
+</head>
+<body>
+  <header class="main-header">
+    <button class="menu-btn" id="menu-btn">
+      <img src="image/barblack.png" alt="Menu" class="menu-icon" />
+    </button>
+    <a href="index.html"><h1>Hanspoon</h1></a>
+  </header>
+  
+ 
+<nav class="hamburger-menu" id="hamburgerMenu">
+    <ul>
+      <li>
+        <button class="dropdown-toggle" id="recipesToggle">
+            Recipes <span class="dropdown-icon">▼</span>
+          </button>
+        <ul class="sub-menu" id="recipesSubMenu">
+            <li><a href="rice_category.html">Rice</a></li>
+            <li><a href="soups_category.html">Soups & Stews</a></li>
+            <li><a href="side_category.html">Side Dishes</a></li>
+            <li><a href="noodles_category.html">Noodles</a></li>
+            <li><a href="one_bowl_category.html">One-Bowl Dishes</a></li>
+            <li><a href="others_category.html">Others</a></li>
+        </ul>
+      </li>
+      <li><strong><a href="community.html">Community & Sharing</a></strong></li>
+      <li><strong><a href="mykitchen.html">My Kitchen</a></strong></li>
+      <li><strong><a href="about.html">About & Contact</a></strong></li>
+    </ul>
+  </nav>
+
+  <div class="main-nav-bar">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="community.html">Community & Sharing</a></li>
+        <li><a href="mykitchen.html">My Kitchen</a></li>
+        <li><a href="about.html">About & Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="community-page">
+ 
+    <div class="section-header">
+        <h2 class="section-title">About us</h2>
+    </div>
+
+    <div class="about-container">
+        <section class="about-intro scroll-reveal">
+      <h2>One Spoon, Infinite Flavor</h2>
+      <p>Welcome to Hanspoon!</p>
+      <p>
+        Hanspoon serves as a recipe sharing platform that presents simple Korean recipes
+        you can prepare within 10 to 20 minutes. We aim to assist busy students and working
+        professionals along with foreign food enthusiasts in preparing Korean meals quickly
+        without complex recipes or rare ingredients.
+      </p>
+      <p>
+        Our recipes focus on comfort and practicality. You need only a small amount of time
+        together with common kitchen ingredients. Hanspoon let people who live alone or have
+        limited time easily prepare Korean dishes at home.
+      </p>
+      <p>
+        Hanspoon offers more than just recipes. It’s a space for sharing and community.
+        The platform enables users to share their original recipes and post reviews while
+        gaining inspiration from others’ kitchen creations.
+      </p>
+      <p>
+        Explore cooking and sharing with Hanspoon while relishing simple recipes one at a time.
+      </p>
+    </section>
+
+    <section class="contact-section scroll-reveal">
+        <div class="contact-banner scroll-reveal"> 
+          <div class="contact-text">
+            <h3>We’d love to hear from you!</h3>
+            <p>Whether you have a question, recipe, or report a bug, want to share your feedback, or just want to say hi, feel free to reach out to us!</p>
+            <p>Email: Contact@hanspoon.com<br>
+               Instagram: @10minute_Korean_Food</p>
+            <p>For common questions, visit our FAQ page.</p>
+      
+        
+            <button class="feedback-btn" id="feedbackToggleBtn">
+              Give feedbacks
+            </button>
+      
+        
+            <div class="feedback-form" id="feedbackForm" style="display: none;">
+              <h4>Give feedbacks</h4>
+              <p id="feedbackError" class="error-message">Please enter at least 10 characters.</p>
+              <textarea id="feedbackInput" placeholder="Please enter your text."></textarea>
+             
+              <div class="form-buttons">
+                <button class="send-btn">Send</button>
+                <button class="cancel-btn" id="cancelBtn">Cancel</button>
+              </div>
+              <div id="thankYouCard" class="thank-you-card">🎉 Thanks for sharing your thoughts!</div>
+            </div>
+          </div>
+        </div>
+      </section>      
+      
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Contact</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </footer>
+
+  <script src="js/allmenu.js"></script>
+
+  <script>
+const feedbackBtn = document.getElementById('feedbackToggleBtn');
+const feedbackForm = document.getElementById('feedbackForm');
+const cancelBtn = document.getElementById('cancelBtn');
+const contactBanner = document.querySelector('.contact-banner'); 
+
+feedbackBtn.addEventListener('click', () => {
+  feedbackForm.classList.add('active');
+  contactBanner.classList.add('active'); 
+  feedbackBtn.style.display = 'none';
+});
+
+cancelBtn.addEventListener('click', () => {
+  feedbackForm.classList.remove('active');
+  contactBanner.classList.remove('active'); 
+  feedbackBtn.style.display = 'inline-block';
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollElements = document.querySelectorAll(".scroll-reveal");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  scrollElements.forEach(el => observer.observe(el));
+});
+
+const sendBtn = document.querySelector('.send-btn');
+const feedbackInput = document.getElementById('feedbackInput');
+const errorMessage = document.getElementById('feedbackError');
+const thankYouCard = document.getElementById('thankYouCard'); 
+
+sendBtn.addEventListener('click', () => {
+  const inputValue = feedbackInput.value.trim();
+
+  if (inputValue.length < 10) {
+    errorMessage.style.display = 'block';
+    thankYouCard.style.display = 'none';
+    return;
+  }
+
+  errorMessage.style.display = 'none';
+  feedbackInput.value = '';
+  thankYouCard.style.display = 'block';
+});
+
+
+  </script>
+    
+</body>
+</html>

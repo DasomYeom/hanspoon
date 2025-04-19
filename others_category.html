@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanspoon - Rice Recipes</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="font/fonts.css" />
+  <link rel="stylesheet" href="css/rice_recipes.css" />
+  <link rel="stylesheet" href="css/allmenu.css" />
+  <link rel="stylesheet" href="css/font.css">
+</head>
+<body>
+  <header class="main-header hero-header">
+    <button class="menu-btn" id="menu-btn">
+      <img src="image/barblack.png" alt="Menu" class="menu-icon" />
+    </button>
+    <a href="index.html"><h1>Hanspoon</h1></a>
+  </header>
+
+  <nav class="hamburger-menu" id="hamburgerMenu">
+    <ul>
+      <li>
+        <button class="dropdown-toggle" id="recipesToggle">
+          <strong>Recipes</strong> <span class="dropdown-icon">▼</span>
+        </button>
+        <ul class="sub-menu" id="recipesSubMenu">
+            <li><a href="rice_category.html">Rice</a></li>
+            <li><a href="soups_category.html">Soups & Stews</a></li>
+            <li><a href="side_category.html">Side Dishes</a></li>
+            <li><a href="noodles_category.html">Noodles</a></li>
+            <li><a href="one_bowl_category.html">One-Bowl Dishes</a></li>
+            <li><a href="others_category.html">Others</a></li>
+        </ul>
+      </li>
+      <li><strong><a href="community.html">Community & Sharing</a></strong></li>
+      <li><strong><a href="mykitchen.html">My Kitchen</a></strong></li>
+      <li><strong><a href="about.html">About & Contact</a></strong></li>
+    </ul>
+  </nav>
+
+  <hr class="section-divider top" style="max-width: 1100px; margin: 0 auto;" />
+
+  <main class="category-section">
+    <div class="content-wrapper">
+      <div class="categories-wrapper">
+        <div class="categories">
+          <div class="category">
+            <a href="rice_category.html">
+              <p>Rice</p>
+              <img src="image/rice.jpeg" alt="Rice" />
+            </a>
+          </div>
+          <div class="category">
+            <a href="soups_category.html">
+              <p>Soups & Stews</p>
+              <img src="image/soup.jpeg" alt="Soups & Stews" />
+            </a>
+          </div>
+          <div class="category">
+            <a href="side_category.html">
+              <p>Side Dishes</p>
+              <img src="image/side.jpeg" alt="Side Dishes" />
+            </a>
+          </div>
+          <div class="category">
+            <a href="noodles_category.html">
+              <p>Noodles</p>
+              <img src="image/noodle.jpeg" alt="Noodles" />
+            </a>
+          </div>
+          <div class="category">
+            <a href="one_bowl_category.html">
+              <p>One-Bowl Dishes</p>
+              <img src="image/bowl.jpeg" alt="One-Bowl Dishes" />
+            </a>
+          </div>
+          <div class="category">
+            <a href="others_category.html">
+              <p>Others</p>
+              <img src="image/others.jpeg" alt="Others" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider bottom" style="max-width: 1100px; margin: 0 auto;" />
+
+      <section class="recipe-search">
+        <div class="search-heading-bar">
+          <h2>Rice</h2>
+          <form class="search-bar" action="#" method="get">
+            <button type="submit">Search</button>
+            <input type="text" id="search" placeholder="Search recipes" />
+          </form>
+        </div>
+      </section>
+
+      <div class="recipe-container">
+        <section class="recipe-list">
+
+          <div class="recipe-card">
+            <a href="ricemaking.html">
+              <div class="image-container">
+                <img src="image/others.jpeg" alt="Freshly cooked rice" />
+                <button class="bookmark-btn">
+                <img src="image/bookmark.png" alt="Bookmark" />
+              </button>            
+              </div>
+              <div class="card-text">
+                <h4>Dongtaejeon</h4>
+                <p>Crispy fish patties, pan-fried to perfection!</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="recipe-card">
+            <a href="soy_egg_rice.html">
+              <div class="image-container">
+                <img src="image/nightsnakc.jpeg" alt="Soy Sauce Egg Rice" />
+                <button class="bookmark-btn"><img src="image/bookmark.png" alt="Bookmark" /></button>
+              </div>
+              <div class="card-text">
+                <h4>Kimchijeon</h4>
+                <p>Savory pancake with a spicy kimchi kick!</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="recipe-card">
+            <a href="kimchi_fried_rice.html">
+              <div class="image-container">
+                <img src="image/pancake.jpg" alt="Kimchi Fried Rice" />
+                <button class="bookmark-btn"><img src="image/bookmark.png" alt="Bookmark" /></button>
+              </div>
+              <div class="card-text">
+                <h4>Cabbage Jeon</h4>
+                <p>Light and crispy, full of veggie goodness!</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="recipe-card">
+            <a href="tuna_mayo.html">
+              <div class="image-container">
+                <img src="image/redcheesechicken.jpg" alt="Tuna Mayo Rice Balls" />
+                <button class="bookmark-btn"><img src="image/bookmark.png" alt="Bookmark" /></button>
+              </div>
+              <div class="card-text">
+                <h4>Dakgalbi</h4>
+                <p>Spicy stir-fried chicken that hits the spot!</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="recipe-card">
+            <a href="kimbap.html">
+              <div class="image-container">
+                <img src="image/fivecolorpancake.jpg" alt="Kimbap" />
+                <button class="bookmark-btn"><img src="image/bookmark.png" alt="Bookmark" /></button>
+              </div>
+              <div class="card-text">
+                <h4>Five-color pancake made without skewers</h4>
+                <p>I made a new recipe from the original recipe....</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="recipe-card">
+            <a href="crabeggrice.html">
+              <div class="image-container">
+                <img src="image/marinatedporkribs.jpg" alt="Crabmeat egg rice bowl" />
+                <button class="bookmark-btn"><img src="image/bookmark.png" alt="Bookmark" /></button>
+              </div>
+              <div class="card-text">
+                <h4>Braised Pork Ribs</h4>
+                <p>Tender ribs soaked in sweet & savory glaze!</p>
+              </div>
+            </a>
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Contact</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+  </footer>
+
+  <script src="js/bookmark.js"></script>
+  <script src="js/allmenu.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

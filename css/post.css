@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    background-color: #EEEBE1;
+    font-family: 'Sanita', sans-serif;
+    color: #131810;
+  }
+  
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    background-color: #EEEBE1;
+    position: relative;
+    padding: 0 24px;
+  }
+  
+  .main-header h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 24px;
+    text-decoration: none;
+    color: #131810;
+  }
+  
+  .menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+  
+  .menu-icon {
+    width: 15px;
+    height: auto;
+  }
+  
+  .main-nav-bar {
+    font-family: 'Anek Gurmukhi', sans-serif;
+    width: 100vw;
+    border-top: 1px solid #131810;
+    border-bottom: 1px solid #131810;
+    background-color: #EEEBE1;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+  
+  .main-nav li a {
+    text-decoration: none;
+    color: #131810;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .section-header {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+  }
+
+  
+  .section-title {
+    max-width: 600px;
+    margin: 0 auto 16px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding: 0 20px; 
+  }
+
+
+.recipe-main-title,
+.recipe-main-text,
+.recipe-meta {
+font-family: 'Anek Gurmukhi', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: left;
+  margin-bottom: 50px; 
+  margin-top: 50px; 
+}
+
+  
+  .recipe-main-image img {
+    width: 100%;
+    max-width: 600px;          
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;       
+  }
+  
+  .recipe-sub-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .recipe-sub-images img {
+    width: 100%;
+    max-width: 280px;          
+    height: auto;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .recipe-path {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 40px; 
+  }
+
+
+  .main-footer {
+    font-family: 'Anek Gurmukhi', sans-serif;
+    background-color: #EEEBE1;
+    color: #131810;
+    padding: 40px 0;
+    text-align: left;
+    border-top: 1px solid #131810;
+  }
+  
+  .footer-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .main-footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  
+  .main-footer a {
+    color: #131810;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .main-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .share-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .share-btn {
+    background-color: #131810;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 18px 36px;
+    border: none;
+    border-radius: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanspoon</title>
+
+  <link rel="stylesheet" href="font.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/allmenu.css" />
+  <link rel="stylesheet" href="css/font.css">
+</head>
+<body>
+
+
+  <header class="main-header">
+    <button class="menu-btn" id="menu-btn">
+      <img src="image/barblack.png" alt="Menu" class="menu-icon" />
+    </button>    
+    <a href="index.html">
+      <h1>Hanspoon</h1>
+    </a>
+  </header>
+
+
+  <nav class="hamburger-menu" id="hamburgerMenu">
+    <ul>
+      <li>
+        <button class="dropdown-toggle" id="recipesToggle">
+          <strong>Recipes</strong> <span class="dropdown-icon">▼</span>
+        </button>
+        <ul class="sub-menu" id="recipesSubMenu">
+          <li><a href="rice_category.html">Rice</a></li>
+          <li><a href="soups_category.html">Soups & Stews</a></li>
+          <li><a href="side_category.html">Side Dishes</a></li>
+          <li><a href="noodles_category.html">Noodles</a></li>
+          <li><a href="one_bowl_category.html">One-Bowl Dishes</a></li>
+          <li><a href="others_category.html">Others</a></li>
+        </ul>
+      </li>
+      <li><strong><a href="community.html">Community & Sharing</a></strong></li>
+      <li><strong><a href="mykitchen.html">My Kitchen</a></strong></li>
+      <li><strong><a href="about.html">About & Contact</a></strong></li>
+    </ul>
+  </nav>
+
+  <hr class="section-divider">
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Today's Best Recipes</h3>
+      <ul>
+        <li>
+          <a href="soy_egg_rice.html">
+            <img src="image/sotegg.jpeg" alt="Soy Sauce Egg Rice" class="sidebar-thumb" />
+            <span>Soy Sauce Egg Rice</span>
+          </a>
+        </li>
+        <li>
+          <a href="tuna_mayo.html">
+            <img src="image/tunamayo.jpeg" alt="Tuna Mayo Rice Balls" class="sidebar-thumb" />
+            <span>Tuna Mayo Rice Balls</span>
+          </a>
+        </li>
+        <li>
+          <a href="doenjang_soup.html">
+            <img src="image/miso.jpeg" alt="Microwave Doenjang Soup" class="sidebar-thumb" />
+            <span>Microwave Doenjang Soup</span>
+          </a>
+        </li>
+      </ul>
+      <a href="review.html" class="all-reviews">View All Reviews →</a>
+    </aside>
+
+    <main class="main-content">
+      <section class="hero">
+        <div class="hero-slider">
+          <div class="hero-slide active">
+            <img src="image/tunamayo.jpeg" alt="Tuna Mayo Rice Balls" />
+            <div class="hero-text">
+              <h2><span class="highlight">Tuna Mayo</span> Rice Balls</h2>
+              <p>A fantastic blend of savory and sweet mayonnaise and tuna.</p>
+            </div>
+            <a class="recipe-btn" href="tuna_mayo.html">Going to see the recipe →</a>
+          </div>
+      
+          <div class="hero-slide">
+            <img src="image/kindhrice.jpeg" alt="Kimchi Fried Rice" />
+            <div class="hero-text">
+              <h2><span class="highlight">Kimchi</span> Fried Rice</h2>
+              <p>The combination of spicy and salty and fantastic kimchi and rice!</p>
+            </div>
+            <a class="recipe-btn" href="kimchi_fried_rice.html">Going to see the recipe →</a>
+          </div>
+      
+          <div class="hero-slide">
+            <img src="image/sotegg.jpg" alt="Soy Sauce Egg Rice" />
+            <div class="hero-text">
+              <h2><span class="highlight">Soy Sauce</span> Egg Rice</h2>
+              <p>The richness of salty savory eggs and soy sauce.</p>
+            </div>
+            <a class="recipe-btn" href="soy_egg_rice.html">Going to see the recipe →</a>
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="categories">
+        <div class="category">
+          <a href="rice_category.html">
+            <img src="image/rice.jpeg" alt="Rice" />
+            <p>Rice</p>
+          </a>
+        </div>
+        <div class="category">
+          <a href="soup_category.html">
+            <img src="image/soup.jpeg" alt="Soups & Stews" />
+            <p>Soups & Stews</p>
+          </a>
+        </div>
+        <div class="category">
+          <a href="side_category.html">
+            <img src="image/side.jpeg" alt="Side Dishes" />
+            <p>Side Dishes</p>
+          </a>
+        </div>
+        <div class="category">
+          <a href="noodle_category.html">
+            <img src="image/noodle.jpeg" alt="Noodles" />
+            <p>Noodles</p>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="main-footer">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Contact</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </footer>
+
+  <script src="js/allmenu.js"></script>
+
+  <script>
+    const slides = document.querySelectorAll(".hero-slide");
+    let current = 0;
+  
+    function showNextSlide() {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }
+  
+    setInterval(showNextSlide, 5000); 
+  </script>
+  
+
+</body>
+</html>
