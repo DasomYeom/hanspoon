@@ -42,6 +42,11 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+.main-header a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .menu-btn {
   position: absolute;
@@ -443,3 +448,4 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
