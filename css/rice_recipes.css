@@ -165,7 +165,6 @@ body {
   transform: translateY(-5px);
 }
 
-/* 이미지 영역 더 키우기 */
 .image-container {
   position: relative;
   width: 100%;
@@ -228,7 +227,7 @@ body {
   margin-bottom: 12px;
 }
 
-/* 북마크 애니메이션 */
+
 .bookmark-btn.animate {
   animation: pop 0.3s ease;
 }
